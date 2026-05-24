@@ -12,7 +12,7 @@ void setup() {
   File file = cdh.create_file("test.txt");
   if (file) {
     for(uint8_t i = 0; i < 10; i++) {
-      cdh.write_file(file, "Hello, HEPTA-Sat\n");
+      cdh.printf_file(file, "Hello, HEPTA-Sat\n");
     }
     file.close();
   } else {
