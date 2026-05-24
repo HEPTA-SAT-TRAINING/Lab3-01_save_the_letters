@@ -4,6 +4,9 @@ HeptaCdh cdh;
 
 void setup() {
   cdh.begin();
+  cdh.wait_for_serial();
+
+  cdh.wait_for_sd();
   cdh.println("Saving letters to the SD card...");
 
   File file = cdh.create_file("test.txt");
